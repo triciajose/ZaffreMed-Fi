@@ -61,7 +61,7 @@
     <div class="large-12 columns">
       <div class="row collapse">
         <div class="small-10 columns">
-          <input type="text" placeholder="Hex Value">
+          <input type="text" placeholder="New Question">
         </div>
         <div class="small-2 columns">
           <a href="#" class="button postfix">Go</a>
