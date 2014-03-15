@@ -17,34 +17,43 @@
   <script src="foundation-5.2.1/js/vendor/jquery.js"></script>
   <script src="foundation-5.2.1/js/foundation.min.js"></script>
 
+
     <script>
       $(document).foundation();
 
     </script>
- 
     <!-- Main Feed -->
     <!-- Navigation -->
     <div class="off-canvas-wrap">
   <div class="inner-wrap">
-    <nav class="tab-bar">
+<!--     <div class="sticky">
+ -->    <nav class="tab-bar">
       <section class="left-small">
         <a class="left-off-canvas-toggle menu-icon" ><span></span></a>
       </section>
 
       <section class="middle tab-bar-section">
-        <h1 class="title">Zaffre</h1>
+        <h1 class="title"> Welcome, <?php echo $_POST["username"];?> </h1>
       </section>
 
-      <section class="right-small">
-        <a class="right-off-canvas-toggle menu-icon" ><span></span></a>
+      <section class="right">
+        <strong>Current Class:</strong> EECE 418
       </section>
     </nav>
-
+<!--     </div>
+ -->
     <aside class="left-off-canvas-menu">
       <ul class="off-canvas-list">
-        <li><label>Foundation</label></li>
-        <li><a href="#">The Psychohistorians</a></li>
-        ...
+        <li><label>My Classes</label></li>
+        <li><a href="#">EECE 418</a></li>
+        <li><a href="#">NAPS 425</a></li>
+        <li><a href="#">NOMS 300</a></li>
+        <li><label>Settings</label></li>
+        <li><a href="#">Add a class</a></li>
+        <li><a href="#">Edit profile</a></li>
+        <li><a href="#">Logout</a></li>
+
+
       </ul>
     </aside>
 
@@ -69,69 +78,82 @@
       </div>
     </div>
       <div class="large-12 columns">
- 
+      <div class="question">
       <!-- Feed Entry -->
       <div class="row">
         <div class="large-2 columns small-3"><img src="http://placehold.it/80x80&text=[img]" /></div>
         <div class="large-10 columns">
           <p><strong>Some Person said:</strong> Bacon ipsum dolor sit amet nulla ham qui sint exercitation eiusmod commodo, chuck duis velit. Aute in reprehenderit, dolore aliqua non est magna in labore pig pork biltong.</p>
           <ul class="inline-list">
-            <li><a href="">Reply</a></li>
-            <li><a href="">Share</a></li>
+            <li class="right"><a href="">Reply</a></li>
+            <li class="right"><a href="">Promote</a></li>
           </ul>
- 
- 
-          <h6>2 Comments</h6>
-          <div class="row">
-            <div class="large-2 columns small-3"><img src="http://placehold.it/50x50&text=[img]" /></div>
-            <div class="large-10 columns"><p>Bacon ipsum dolor sit amet nulla ham qui sint exercitation eiusmod commodo, chuck duis velit. Aute in reprehenderit</p></div>
-          </div>
-          <div class="row">
-            <div class="large-2 columns small-3"><img src="http://placehold.it/50x50&text=[img]" /></div>
-            <div class="large-10 columns"><p>Bacon ipsum dolor sit amet nulla ham qui sint exercitation eiusmod commodo, chuck duis velit. Aute in reprehenderit</p></div>
-          </div>
         </div>
       </div>
       <!-- End Feed Entry -->
  
-      <hr />
+      <hr /></div>
  
+    <div class="question">
       <!-- Feed Entry -->
       <div class="row">
         <div class="large-2 columns small-3"><img src="http://placehold.it/80x80&text=[img]" /></div>
         <div class="large-10 columns">
           <p><strong>Some Person said:</strong> Bacon ipsum dolor sit amet nulla ham qui sint exercitation eiusmod commodo, chuck duis velit. Aute in reprehenderit, dolore aliqua non est magna in labore pig pork biltong.</p>
           <ul class="inline-list">
-            <li><a href="">Reply</a></li>
-            <li><a href="">Share</a></li>
+            <li class="right"><a href="">Reply</a></li>
+            <li class="right"><a href="">Promote</a></li>
           </ul>
         </div>
       </div>
       <!-- End Feed Entry -->
  
-      <hr />
+      <hr /></div>
  
+      <div class="question">
       <!-- Feed Entry -->
       <div class="row">
         <div class="large-2 columns small-3"><img src="http://placehold.it/80x80&text=[img]" /></div>
         <div class="large-10 columns">
           <p><strong>Some Person said:</strong> Bacon ipsum dolor sit amet nulla ham qui sint exercitation eiusmod commodo, chuck duis velit. Aute in reprehenderit, dolore aliqua non est magna in labore pig pork biltong.</p>
           <ul class="inline-list">
-            <li><a href="">Reply</a></li>
-            <li><a href="">Share</a></li>
+            <li class="right"><a href="">Reply</a></li>
+            <li class="right"><a href="">Promote</a></li>
           </ul>
- 
- 
-          <h6>2 Comments</h6>
-          <div class="row">
-            <div class="large-2 columns small-3"><img src="http://placehold.it/50x50&text=[img]" /></div>
-            <div class="large-10 columns"><p>Bacon ipsum dolor sit amet nulla ham qui sint exercitation eiusmod commodo, chuck duis velit. Aute in reprehenderit</p></div>
-          </div>
+        </div>
+      </div>
+      <!-- End Feed Entry -->
+      <hr /></div>
+      <div class="question">
+      <!-- Feed Entry -->
+      <div class="row">
+        <div class="large-2 columns small-3"><img src="http://placehold.it/80x80&text=[img]" /></div>
+        <div class="large-10 columns">
+          <p><strong>Some Person said:</strong> Bacon ipsum dolor sit amet nulla ham qui sint exercitation eiusmod commodo, chuck duis velit. Aute in reprehenderit, dolore aliqua non est magna in labore pig pork biltong.</p>
+          <ul class="inline-list">
+            <li class="right"><a href="">Reply</a></li>
+            <li class="right"><a href="">Promote</a></li>
+          </ul>
         </div>
       </div>
       <!-- End Feed Entry -->
  
-    </div>
+      <hr /></div>
+      <div class="question">
+      <!-- Feed Entry -->
+      <div class="row">
+        <div class="large-2 columns small-3"><img src="http://placehold.it/80x80&text=[img]" /></div>
+        <div class="large-10 columns">
+          <p><strong>Some Person said:</strong> Bacon ipsum dolor sit amet nulla ham qui sint exercitation eiusmod commodo, chuck duis velit. Aute in reprehenderit, dolore aliqua non est magna in labore pig pork biltong.</p>
+          <ul class="inline-list">
+            <li class="right"><a href="">Reply</a></li>
+            <li class="right"><a href="">Promote</a></li>
+          </ul>
+        </div>
+      </div>
+      <!-- End Feed Entry -->
+ 
+      <hr /></div>
     </section>
 
   <a class="exit-off-canvas"></a>
@@ -149,7 +171,7 @@
       <hr />
       <div class="row">
         <div class="large-5 columns">
-          <p>© Copyright no one at all. Go to town.</p>
+          <p>© Copyright Team Zaffre</p>
         </div>
         <div class="large-7 columns">
           <ul class="inline-list right">
@@ -164,4 +186,5 @@
       </div>
     </div>
   </footer>
-</body>    
+</body>   
+</html> 
