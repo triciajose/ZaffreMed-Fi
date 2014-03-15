@@ -35,6 +35,9 @@
       <section class="middle tab-bar-section">
         <h1 class="title"> Welcome, <?php echo $_POST["username"];?> </h1>
       </section>
+      <section class="middle tab-bar-section">
+        <h3>There are <?php echo rand(0,80);?> students online</h3>
+      </section>
 
       <section class="right">
         <strong>Current Class:</strong> EECE 418
