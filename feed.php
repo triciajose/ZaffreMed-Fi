@@ -67,7 +67,7 @@
         <form action="feed.php" method="post">
           <div class="row collapse">
             <div class="small-10 columns">
-              <input type="text" name="new_question" placeholder="New Question">
+              <textarea name="new_question" placeholder="New Question" cols="50" rows="3"></textarea>
             </div>
             <div class="small-2 columns">
               <input type="submit" class="button postfix" value="Go"/>
@@ -88,7 +88,7 @@
                     <?php echo $_POST["new_question"];?>
                   </p>
                   <ul class="inline-list">
-                    <li class="right"><a href="">Reply</a></li>
+                    <li class="right"><a href=<?php echo "question_comments.php?question=".$_POST["new_question"]."&status=pending";?>>Reply</a></li>
                     <li class="right"><a href="">Promote</a></li>
                   </ul>
                   <hr/>
@@ -106,7 +106,7 @@
             <div class="large-10 columns">
               <p><strong>Some Person said:</strong> Bacon ipsum dolor sit amet nulla ham qui sint exercitation eiusmod commodo, chuck duis velit. Aute in reprehenderit, dolore aliqua non est magna in labore pig pork biltong.</p>
               <ul class="inline-list">
-                <li class="right"><a href="">Reply</a></li>
+                <li class="right"><a href="question_comments.php?question='Bacon ipsum dolor sit amet nulla ham qui sint exercitation eiusmod commodo, chuck duis velit. Aute in reprehenderit, dolore aliqua non est magna in labore pig pork biltong.'&status=pending">Reply</a></li>
                 <li class="right"><a href="">Promote</a></li>
               </ul>
             </div>
@@ -123,7 +123,7 @@
         <div class="large-10 columns">
           <p><strong>Some Person said:</strong> Bacon ipsum dolor sit amet nulla ham qui sint exercitation eiusmod commodo, chuck duis velit. Aute in reprehenderit, dolore aliqua non est magna in labore pig pork biltong.</p>
           <ul class="inline-list">
-            <li class="right"><a href="">Reply</a></li>
+            <li class="right"><a href="question_comments.php?question='Bacon ipsum dolor sit amet nulla ham qui sint exercitation eiusmod commodo, chuck duis velit. Aute in reprehenderit, dolore aliqua non est magna in labore pig pork biltong.'&status=student_solved">Reply</a></li>
             <li class="right"><a href="">Promote</a></li>
           </ul>
         </div>
@@ -139,7 +139,7 @@
         <div class="large-10 columns">
           <p><strong>Some Person said:</strong> Bacon ipsum dolor sit amet nulla ham qui sint exercitation eiusmod commodo, chuck duis velit. Aute in reprehenderit, dolore aliqua non est magna in labore pig pork biltong.</p>
           <ul class="inline-list">
-            <li class="right"><a href="">Reply</a></li>
+            <li class="right"><a href="question_comments.php?question='Bacon ipsum dolor sit amet nulla ham qui sint exercitation eiusmod commodo, chuck duis velit. Aute in reprehenderit, dolore aliqua non est magna in labore pig pork biltong.'&status=pending">Reply</a></li>
             <li class="right"><a href="">Promote</a></li>
           </ul>
         </div>
@@ -149,11 +149,11 @@
       <div class="question">
       <!-- Feed Entry -->
       <div class="row">
-        <div class="large-2 columns small-3">><img src="professor_solved.png" /></div>
+        <div class="large-2 columns small-3"><img src="professor_solved.png" /></div>
         <div class="large-10 columns">
           <p><strong>Some Person said:</strong> Bacon ipsum dolor sit amet nulla ham qui sint exercitation eiusmod commodo, chuck duis velit. Aute in reprehenderit, dolore aliqua non est magna in labore pig pork biltong.</p>
           <ul class="inline-list">
-            <li class="right"><a href="">Reply</a></li>
+            <li class="right"><a href="question_comments.php?question='Bacon ipsum dolor sit amet nulla ham qui sint exercitation eiusmod commodo, chuck duis velit. Aute in reprehenderit, dolore aliqua non est magna in labore pig pork biltong.'&status=professor_solved">Reply</a></li>
             <li class="right"><a href="">Promote</a></li>
           </ul>
         </div>
@@ -168,7 +168,7 @@
         <div class="large-10 columns">
           <p><strong>Some Person said:</strong> Bacon ipsum dolor sit amet nulla ham qui sint exercitation eiusmod commodo, chuck duis velit. Aute in reprehenderit, dolore aliqua non est magna in labore pig pork biltong.</p>
           <ul class="inline-list">
-            <li class="right"><a href="">Reply</a></li>
+            <li class="right"><a href="question_comments.php?question='Bacon ipsum dolor sit amet nulla ham qui sint exercitation eiusmod commodo, chuck duis velit. Aute in reprehenderit, dolore aliqua non est magna in labore pig pork biltong.'&status=pending">Reply</a></li>
             <li class="right"><a href="">Promote</a></li>
           </ul>
         </div>

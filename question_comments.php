@@ -37,8 +37,8 @@
 					<form action="question_comments.php" method="post">
 						<input type="hidden" name="question" value=<?php if(isset($_GET["question"])) {echo $_GET["question"];} else {echo $_POST["question"]; }?>>
 						<input type="hidden" name="status" value=<?php if(isset($_GET["status"])) {echo $_GET["status"];} else {echo $_POST["status"]; }?>>
-						<textarea cols="50" rows="3" name="new_comment" placeholder="Type your comment here">  </textarea>
-						<input type="submit" value="Go" />
+						<textarea cols="50" rows="3" name="new_comment" placeholder="Type your comment here"></textarea>
+						<input type="submit" value="Answer" />
 					</form>
 					<ul>
 						<?php for($i = 0; $i <=6; $i++){?>
