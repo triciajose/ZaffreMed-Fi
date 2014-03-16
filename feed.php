@@ -33,7 +33,7 @@
       </section>
 
       <section class="middle tab-bar-section">
-        <h1 class="title"> Welcome, <?php echo $_POST["username"];?> </h1>
+        <h1 class="title"> Welcome, <?php if(isset($_POST["username"])){ echo $_POST["username"];} ?> </h1>
       </section>
       <section class="middle tab-bar-section">
         <h3>There are <?php echo rand(0,80);?> students online</h3>
@@ -84,7 +84,7 @@
       <div class="question">
       <!-- Feed Entry -->
       <div class="row">
-        <div class="large-2 columns small-3"><img src="http://placehold.it/80x80&text=[img]" /></div>
+        <div class="large-2 columns small-3"><img src="pending.png" /></div>
         <div class="large-10 columns">
           <p><strong>Some Person said:</strong> Bacon ipsum dolor sit amet nulla ham qui sint exercitation eiusmod commodo, chuck duis velit. Aute in reprehenderit, dolore aliqua non est magna in labore pig pork biltong.</p>
           <ul class="inline-list">
@@ -100,7 +100,7 @@
     <div class="question">
       <!-- Feed Entry -->
       <div class="row">
-        <div class="large-2 columns small-3"><img src="http://placehold.it/80x80&text=[img]" /></div>
+        <div class="large-2 columns small-3"><img src="student_solved.png" /></div>
         <div class="large-10 columns">
           <p><strong>Some Person said:</strong> Bacon ipsum dolor sit amet nulla ham qui sint exercitation eiusmod commodo, chuck duis velit. Aute in reprehenderit, dolore aliqua non est magna in labore pig pork biltong.</p>
           <ul class="inline-list">
@@ -116,7 +116,7 @@
       <div class="question">
       <!-- Feed Entry -->
       <div class="row">
-        <div class="large-2 columns small-3"><img src="http://placehold.it/80x80&text=[img]" /></div>
+        <div class="large-2 columns small-3"><img src="pending.png" /></div>
         <div class="large-10 columns">
           <p><strong>Some Person said:</strong> Bacon ipsum dolor sit amet nulla ham qui sint exercitation eiusmod commodo, chuck duis velit. Aute in reprehenderit, dolore aliqua non est magna in labore pig pork biltong.</p>
           <ul class="inline-list">
@@ -130,7 +130,7 @@
       <div class="question">
       <!-- Feed Entry -->
       <div class="row">
-        <div class="large-2 columns small-3"><img src="http://placehold.it/80x80&text=[img]" /></div>
+        <div class="large-2 columns small-3">><img src="professor_solved.png" /></div>
         <div class="large-10 columns">
           <p><strong>Some Person said:</strong> Bacon ipsum dolor sit amet nulla ham qui sint exercitation eiusmod commodo, chuck duis velit. Aute in reprehenderit, dolore aliqua non est magna in labore pig pork biltong.</p>
           <ul class="inline-list">
@@ -145,7 +145,7 @@
       <div class="question">
       <!-- Feed Entry -->
       <div class="row">
-        <div class="large-2 columns small-3"><img src="http://placehold.it/80x80&text=[img]" /></div>
+        <div class="large-2 columns small-3"><img src="pending.png" /></div>
         <div class="large-10 columns">
           <p><strong>Some Person said:</strong> Bacon ipsum dolor sit amet nulla ham qui sint exercitation eiusmod commodo, chuck duis velit. Aute in reprehenderit, dolore aliqua non est magna in labore pig pork biltong.</p>
           <ul class="inline-list">
