@@ -60,12 +60,6 @@
       </ul>
     </aside>
 
-    <aside class="right-off-canvas-menu">
-      <ul class="off-canvas-list">
-        <li><label>Users</label></li>
-        <li><a href="#">Hari Seldon</a></li>
-      </ul>
-    </aside>
     <br />
     <section class="main-section">
     <div class="row">
