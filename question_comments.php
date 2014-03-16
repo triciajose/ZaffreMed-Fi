@@ -12,8 +12,33 @@
 
 	</head>
 	<body>
-		<?php echo $_GET["question"]?>
-
+		<?php if((isset($_GET["question"]) && isset($_GET["status"])) || (isset($_POST["question"]) && isset($_POST["status"]))) {?>
+			<div class="row">
+				<div class="large-12 columns">
+					<h1><?php if(isset($_GET["question"])) {echo $_GET["question"];} else {echo $_POST["question"]; }?></h1>
+				</div>
+			</div>
+			<div class="row">
+				<div class="large-12 columns">
+					<form action="question_comments.php" method="post">
+						<input type="hidden" name="question" value=<?php if(isset($_GET["question"])) {echo $_GET["question"];} else {echo $_POST["question"]; }?>>
+						<input type="hidden" name="status" value=<?php if(isset($_GET["status"])) {echo $_GET["status"];} else {echo $_POST["status"]; }?>>
+						<input type="text" name="new_comment" placeholder="Type your comment here" />
+						<input type="submit" value="Go" />
+					</form>
+					<ul>
+						<?php for($i = 0; $i <=6; $i++){?>
+							<li>	
+								Comment
+							</li>
+						<?php }?>
+						<?php if(isset($_POST["new_comment"])) {?>
+							<li><?php echo $_POST["new_comment"];?></li>
+						<?php } ?>
+					</ul>
+				</div>
+			</div>
+		<?php }?>
 	</body>
 
 
