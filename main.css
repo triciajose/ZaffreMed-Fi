@@ -14,3 +14,7 @@
     z-index: 100;  
     border-top: 0;  
 }  
+
+.icons img {
+	max-width: 30px;
+}

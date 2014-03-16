@@ -35,12 +35,13 @@
       <section class="middle tab-bar-section">
         <h1 class="title"> Welcome, <?php if(isset($_POST["username"])){ echo $_POST["username"];} ?> </h1>
       </section>
-      <section class="middle tab-bar-section">
-        <h3>There are <?php echo rand(0,80);?> students online</h3>
+      <section class="middle tab-bar-section center">
+      <!-- <h3>There are <?php echo rand(0,80);?> students online</h3> -->
       </section>
 
       <section class="right">
         <strong>Current Class:</strong> EECE 418
+        <h3>There are <?php echo rand(0,80);?> students online</h3>
       </section>
     </nav>
 <!--     </div>
@@ -59,15 +60,16 @@
 
       </ul>
     </aside>
-
-    <br />
     <section class="main-section">
-    <div class="row">
+      <div data-alert class="alert-box info radius large-12 center">
+        <h7>There are <?php echo rand(0,80);?> students online</h7>
+      </div>
       <div class="large-12 columns">
+      <div class="row">
         <form action="feed.php" method="post">
-          <div class="row collapse">
+          <div class="row">
             <div class="small-10 columns">
-              <textarea name="new_question" placeholder="New Question" cols="50" rows="3"></textarea>
+              <textarea name="new_question" placeholder="New Question"></textarea>
             </div>
             <div class="small-2 columns">
               <input type="submit" class="button postfix" value="Go"/>
@@ -75,8 +77,30 @@
           </div>
         </form>
       </div>
-      <?php if(isset($_POST["new_question"])){ ?>
+        <div class="large-12 columns">
+        <!-- Feed Entry -->
+          <div class="row">
+          <div data-alert class="large-12 alert-box warning radius columns"><strong>Question 1</strong> [unresolved]</div>
+            <div class="large-2 columns small-3"><img src="pending.png" /></div>
+            <div class="large-10 columns">
+              <p> Bacon ipsum dolor sit amet nulla ham qui sint exercitation eiusmod commodo, chuck duis velit. Aute in reprehenderit, dolore aliqua non est magna in labore pig pork biltong.</p>
+              <ul class="inline-list">
+                <li class="left"><a href="question_comments.php?question='Bacon ipsum dolor sit amet nulla ham qui sint exercitation eiusmod commodo, chuck duis velit. Aute in reprehenderit, dolore aliqua non est magna in labore pig pork biltong.'&status=pending">
+                  Answer Question 
+                </a></li>
+                <li class="left"><a href="">Promote</a></li>    
+              </ul>
+
+            </div>
+          </div>
+        <!-- End Feed Entry -->
+   <hr />
+    </div>
+ <!-- New question enters queue here -->
+       <?php if(isset($_POST["new_question"])){ ?>
+        <div class="large-12 columns">
         <div class="row">
+        <div data-alert class="large-12 alert-box warning radius columns"><strong>New Question</strong> [unresolved]</div>
           <div class="large-12 columns">
             <div class="question">
               <div class="row">
@@ -84,92 +108,84 @@
                   <img src="pending.png" />
                 </div>
                 <div class="large-10 columns">
-                  <p><strong>Some Person said:</strong>
                     <?php echo $_POST["new_question"];?>
                   </p>
                   <ul class="inline-list">
-                    <li class="right"><a href=<?php echo "question_comments.php?question=".$_POST["new_question"]."&status=pending";?>>Reply</a></li>
-                    <li class="right"><a href="">Promote</a></li>
+                    <li class="left"><a href=<?php echo "question_comments.php?question=".$_POST["new_question"]."&status=pending";?>>Answer Question</a></li>
+                    <li class="left"><a href="">Promote</a></li>
                   </ul>
-                  <hr/>
+                  
                 </div>
               </div>
             </div>
+          
           </div>
+
         </div>
+        <hr/></div>
       <?php }?>
-        <div class="large-12 columns">
-        <div class="question">
-        <!-- Feed Entry -->
-          <div class="row">
-            <div class="large-2 columns small-3"><img src="pending.png" /></div>
-            <div class="large-10 columns">
-              <p><strong>Some Person said:</strong> Bacon ipsum dolor sit amet nulla ham qui sint exercitation eiusmod commodo, chuck duis velit. Aute in reprehenderit, dolore aliqua non est magna in labore pig pork biltong.</p>
-              <ul class="inline-list">
-                <li class="right"><a href="question_comments.php?question='Bacon ipsum dolor sit amet nulla ham qui sint exercitation eiusmod commodo, chuck duis velit. Aute in reprehenderit, dolore aliqua non est magna in labore pig pork biltong.'&status=pending">Reply</a></li>
-                <li class="right"><a href="">Promote</a></li>
-              </ul>
-            </div>
-          </div>
-        <!-- End Feed Entry -->
-   
-      <hr />
-    </div>
- 
-    <div class="question">
+ <!--  -->
+    <div class="large-12 columns">
       <!-- Feed Entry -->
       <div class="row">
+      <div data-alert class="large-12 alert-box radius columns"><strong>Question 2</strong> [answered by student]</div>
+
         <div class="large-2 columns small-3"><img src="student_solved.png" /></div>
         <div class="large-10 columns">
-          <p><strong>Some Person said:</strong> Bacon ipsum dolor sit amet nulla ham qui sint exercitation eiusmod commodo, chuck duis velit. Aute in reprehenderit, dolore aliqua non est magna in labore pig pork biltong.</p>
+          <p>Bacon ipsum dolor sit amet nulla ham qui sint exercitation eiusmod commodo, chuck duis velit. Aute in reprehenderit, dolore aliqua non est magna in labore pig pork biltong.</p>
           <ul class="inline-list">
-            <li class="right"><a href="question_comments.php?question='Bacon ipsum dolor sit amet nulla ham qui sint exercitation eiusmod commodo, chuck duis velit. Aute in reprehenderit, dolore aliqua non est magna in labore pig pork biltong.'&status=student_solved">Reply</a></li>
-            <li class="right"><a href="">Promote</a></li>
+            <li class="left"><a href="question_comments.php?question='Bacon ipsum dolor sit amet nulla ham qui sint exercitation eiusmod commodo, chuck duis velit. Aute in reprehenderit, dolore aliqua non est magna in labore pig pork biltong.'&status=student_solved">Answers (2)</a></li>
+            <li class="left"><a href="">Promote</a></li>
           </ul>
         </div>
       </div>
       <!-- End Feed Entry -->
  
-      <hr /></div>
+      <hr />
+      </div>
  
-      <div class="question">
+      <div class="large-12 columns">
       <!-- Feed Entry -->
       <div class="row">
-        <div class="large-2 columns small-3"><img src="pending.png" /></div>
+        <div data-alert class="large-12 alert-box radius columns"><strong>Question 3</strong> [answered by student]</div>
+        <div class="large-2 columns small-3"><img src="student_solved.png" /></div>
         <div class="large-10 columns">
-          <p><strong>Some Person said:</strong> Bacon ipsum dolor sit amet nulla ham qui sint exercitation eiusmod commodo, chuck duis velit. Aute in reprehenderit, dolore aliqua non est magna in labore pig pork biltong.</p>
+          <p>Bacon ipsum dolor sit amet nulla ham qui sint exercitation eiusmod commodo, chuck duis velit. Aute in reprehenderit, dolore aliqua non est magna in labore pig pork biltong.</p>
           <ul class="inline-list">
-            <li class="right"><a href="question_comments.php?question='Bacon ipsum dolor sit amet nulla ham qui sint exercitation eiusmod commodo, chuck duis velit. Aute in reprehenderit, dolore aliqua non est magna in labore pig pork biltong.'&status=pending">Reply</a></li>
-            <li class="right"><a href="">Promote</a></li>
+            <li class="left"><a href="question_comments.php?question='Bacon ipsum dolor sit amet nulla ham qui sint exercitation eiusmod commodo, chuck duis velit. Aute in reprehenderit, dolore aliqua non est magna in labore pig pork biltong.'&status=pending">Answers (4)</a></li>
+            <li class="left"><a href="">Promote</a></li>
           </ul>
         </div>
       </div>
       <!-- End Feed Entry -->
       <hr /></div>
-      <div class="question">
+      <div class="large-12 columns">
       <!-- Feed Entry -->
       <div class="row">
+          <div data-alert class="large-12 alert-box success radius columns"><strong>Question 4</strong> [marked resolved by professor]</div>
         <div class="large-2 columns small-3"><img src="professor_solved.png" /></div>
         <div class="large-10 columns">
-          <p><strong>Some Person said:</strong> Bacon ipsum dolor sit amet nulla ham qui sint exercitation eiusmod commodo, chuck duis velit. Aute in reprehenderit, dolore aliqua non est magna in labore pig pork biltong.</p>
+          <p>Bacon ipsum dolor sit amet nulla ham qui sint exercitation eiusmod commodo, chuck duis velit. Aute in reprehenderit, dolore aliqua non est magna in labore pig pork biltong.</p>
           <ul class="inline-list">
-            <li class="right"><a href="question_comments.php?question='Bacon ipsum dolor sit amet nulla ham qui sint exercitation eiusmod commodo, chuck duis velit. Aute in reprehenderit, dolore aliqua non est magna in labore pig pork biltong.'&status=professor_solved">Reply</a></li>
-            <li class="right"><a href="">Promote</a></li>
+            <li class="left"><a href="question_comments.php?question='Bacon ipsum dolor sit amet nulla ham qui sint exercitation eiusmod commodo, chuck duis velit. Aute in reprehenderit, dolore aliqua non est magna in labore pig pork biltong.'&status=professor_solved">Answers (2)</a></li>
+            <li class="left"><a href="">Promote</a></li>
           </ul>
         </div>
       </div>
       <!-- End Feed Entry -->
  
       <hr /></div>
-      <div class="question">
+      <div class="large-12 columns">
       <!-- Feed Entry -->
       <div class="row">
-        <div class="large-2 columns small-3"><img src="pending.png" /></div>
+      <div data-alert class="large-12 alert-box success radius columns"><strong>Question 5</strong> [marked resolved by professor]</div>
+
+        <div class="large-2 columns small-3"><img src="professor_solved.png" /></div>
         <div class="large-10 columns">
-          <p><strong>Some Person said:</strong> Bacon ipsum dolor sit amet nulla ham qui sint exercitation eiusmod commodo, chuck duis velit. Aute in reprehenderit, dolore aliqua non est magna in labore pig pork biltong.</p>
+          <p>Bacon ipsum dolor sit amet nulla ham qui sint exercitation eiusmod commodo, chuck duis velit. Aute in reprehenderit, dolore aliqua non est magna in labore pig pork biltong.</p>
           <ul class="inline-list">
-            <li class="right"><a href="question_comments.php?question='Bacon ipsum dolor sit amet nulla ham qui sint exercitation eiusmod commodo, chuck duis velit. Aute in reprehenderit, dolore aliqua non est magna in labore pig pork biltong.'&status=pending">Reply</a></li>
-            <li class="right"><a href="">Promote</a></li>
+            <li class="left"><a href="question_comments.php?question='Bacon ipsum dolor sit amet nulla ham qui sint exercitation eiusmod commodo, chuck duis velit. Aute in reprehenderit, dolore aliqua non est magna in labore pig pork biltong.'&status=pending">Answers (3)</a></li>
+            <li class="left"><a href="">Promote</a></li>
           </ul>
         </div>
       </div>
