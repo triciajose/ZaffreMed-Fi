@@ -69,10 +69,11 @@
         <form action="feed.php" method="post">
           <div class="row">
             <div class="small-10 columns">
-              <textarea name="new_question" placeholder="New Question"></textarea>
+              <input type="text" name="new_question" placeholder="New Question"></input>
             </div>
             <div class="small-2 columns">
               <input type="submit" class="button postfix" value="Go"/>
+            </div>
             </div>
           </div>
         </form>
@@ -80,7 +81,7 @@
         <div class="large-12 columns">
         <!-- Feed Entry -->
           <div class="row">
-          <div data-alert class="large-12 alert-box warning radius columns"><strong>Question 1</strong> [unresolved]</div>
+          <div data-alert class="large-12 alert-box warning radius columns"><strong>Joey asked:</strong> [unresolved]</div>
             <div class="large-2 columns small-3"><img src="pending.png" /></div>
             <div class="large-10 columns">
               <p> Bacon ipsum dolor sit amet nulla ham qui sint exercitation eiusmod commodo, chuck duis velit. Aute in reprehenderit, dolore aliqua non est magna in labore pig pork biltong.</p>
@@ -100,7 +101,7 @@
        <?php if(isset($_POST["new_question"])){ ?>
         <div class="large-12 columns">
         <div class="row">
-        <div data-alert class="large-12 alert-box warning radius columns"><strong>New Question</strong> [unresolved]</div>
+        <div data-alert class="large-12 alert-box warning radius columns"><strong>YOU asked:</strong> [unresolved]</div>
           <div class="large-12 columns">
             <div class="question">
               <div class="row">
@@ -128,7 +129,7 @@
     <div class="large-12 columns">
       <!-- Feed Entry -->
       <div class="row">
-      <div data-alert class="large-12 alert-box radius columns"><strong>Question 2</strong> [answered by student]</div>
+      <div data-alert class="large-12 alert-box radius columns"><strong>Kaley asked:</strong> [answered by student]</div>
 
         <div class="large-2 columns small-3"><img src="student_solved.png" /></div>
         <div class="large-10 columns">
@@ -147,7 +148,7 @@
       <div class="large-12 columns">
       <!-- Feed Entry -->
       <div class="row">
-        <div data-alert class="large-12 alert-box radius columns"><strong>Question 3</strong> [answered by student]</div>
+        <div data-alert class="large-12 alert-box radius columns"><strong>Jon asked:</strong> [answered by student]</div>
         <div class="large-2 columns small-3"><img src="student_solved.png" /></div>
         <div class="large-10 columns">
           <p>Bacon ipsum dolor sit amet nulla ham qui sint exercitation eiusmod commodo, chuck duis velit. Aute in reprehenderit, dolore aliqua non est magna in labore pig pork biltong.</p>
@@ -162,7 +163,7 @@
       <div class="large-12 columns">
       <!-- Feed Entry -->
       <div class="row">
-          <div data-alert class="large-12 alert-box success radius columns"><strong>Question 4</strong> [marked resolved by professor]</div>
+          <div data-alert class="large-12 alert-box success radius columns"><strong>Marley asked:</strong> [marked resolved by professor]</div>
         <div class="large-2 columns small-3"><img src="professor_solved.png" /></div>
         <div class="large-10 columns">
           <p>Bacon ipsum dolor sit amet nulla ham qui sint exercitation eiusmod commodo, chuck duis velit. Aute in reprehenderit, dolore aliqua non est magna in labore pig pork biltong.</p>
@@ -178,7 +179,7 @@
       <div class="large-12 columns">
       <!-- Feed Entry -->
       <div class="row">
-      <div data-alert class="large-12 alert-box success radius columns"><strong>Question 5</strong> [marked resolved by professor]</div>
+      <div data-alert class="large-12 alert-box success radius columns"><strong>Steve asked:</strong> [marked resolved by professor]</div>
 
         <div class="large-2 columns small-3"><img src="professor_solved.png" /></div>
         <div class="large-10 columns">
