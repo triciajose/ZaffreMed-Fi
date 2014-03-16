@@ -73,7 +73,7 @@
         <form action="feed.php" method="post">
           <div class="row collapse">
             <div class="small-10 columns">
-              <input type="text" placeholder="New Question">
+              <input type="text" name="new_question" placeholder="New Question">
             </div>
             <div class="small-2 columns">
               <input type="submit" class="button postfix" value="Go"/>
@@ -81,19 +81,42 @@
           </div>
         </form>
       </div>
+      <?php if(isset($_POST["new_question"])){ ?>
+        <div class="row">
+          <div class="large-12 columns">
+            <div class="question">
+              <div class="row">
+                <div class="large-2 columns small-3">
+                  <img src="pending.png" />
+                </div>
+                <div class="large-10 columns">
+                  <p><strong>Some Person said:</strong>
+                    <?php echo $_POST["new_question"];?>
+                  </p>
+                  <ul class="inline-list">
+                    <li class="right"><a href="">Reply</a></li>
+                    <li class="right"><a href="">Promote</a></li>
+                  </ul>
+                  <hr/>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      <?php }?>
         <div class="large-12 columns">
         <div class="question">
         <!-- Feed Entry -->
-        <div class="row">
-          <div class="large-2 columns small-3"><img src="pending.png" /></div>
-          <div class="large-10 columns">
-            <p><strong>Some Person said:</strong> Bacon ipsum dolor sit amet nulla ham qui sint exercitation eiusmod commodo, chuck duis velit. Aute in reprehenderit, dolore aliqua non est magna in labore pig pork biltong.</p>
-            <ul class="inline-list">
-              <li class="right"><a href="">Reply</a></li>
-              <li class="right"><a href="">Promote</a></li>
-            </ul>
+          <div class="row">
+            <div class="large-2 columns small-3"><img src="pending.png" /></div>
+            <div class="large-10 columns">
+              <p><strong>Some Person said:</strong> Bacon ipsum dolor sit amet nulla ham qui sint exercitation eiusmod commodo, chuck duis velit. Aute in reprehenderit, dolore aliqua non est magna in labore pig pork biltong.</p>
+              <ul class="inline-list">
+                <li class="right"><a href="">Reply</a></li>
+                <li class="right"><a href="">Promote</a></li>
+              </ul>
+            </div>
           </div>
-        </div>
         <!-- End Feed Entry -->
    
       <hr />
