@@ -13,6 +13,20 @@
 	</head>
 	<body>
 		<?php if((isset($_GET["question"]) && isset($_GET["status"])) || (isset($_POST["question"]) && isset($_POST["status"]))) {?>
+			<?php if(isset($_POST["status"])) $status = $_POST["status"]; else $status = $_GET["status"]?>
+			<?php switch($status) {
+				 case "pending": 
+						echo "<img src= \"pending.png\">"; 						
+					 break;
+				 case "professor_solved": 
+						echo "<img src= \"professor_solved.png\">"; 
+					 break;
+				 case "student_solved": 
+						echo "<img src= \"student_solved.png\">"; 
+					 break;
+				 default: 
+					echo "<img src=\"http://placehold.it/250x250&text=[logo]\">"; 
+			 }?>
 			<div class="row">
 				<div class="large-12 columns">
 					<h1><?php if(isset($_GET["question"])) {echo $_GET["question"];} else {echo $_POST["question"]; }?></h1>
@@ -23,7 +37,7 @@
 					<form action="question_comments.php" method="post">
 						<input type="hidden" name="question" value=<?php if(isset($_GET["question"])) {echo $_GET["question"];} else {echo $_POST["question"]; }?>>
 						<input type="hidden" name="status" value=<?php if(isset($_GET["status"])) {echo $_GET["status"];} else {echo $_POST["status"]; }?>>
-						<input type="text" name="new_comment" placeholder="Type your comment here" />
+						<textarea cols="50" rows="3" name="new_comment" placeholder="Type your comment here">  </textarea>
 						<input type="submit" value="Go" />
 					</form>
 					<ul>
@@ -39,6 +53,11 @@
 				</div>
 			</div>
 		<?php }?>
+		<div class="row">
+			<div class="large-12 columns">
+				<a href="feed.php">Back</a>
+			</div>
+		</div>
 	</body>
 
 
