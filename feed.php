@@ -81,12 +81,12 @@
         <div class="large-12 columns">
         <!-- Feed Entry -->
           <div class="row">
-          <div data-alert class="large-12 alert-box warning radius columns"><strong>Joey asked:</strong> [unresolved]</div>
+          <div data-alert class="large-12 alert-box warning radius columns">[unresolved] <strong>Joey asked:</strong></div>
             <div class="large-2 columns small-3"><img src="pending.png" /></div>
             <div class="large-10 columns">
-              <p> Bacon ipsum dolor sit amet nulla ham qui sint exercitation eiusmod commodo, chuck duis velit. Aute in reprehenderit, dolore aliqua non est magna in labore pig pork biltong.</p>
+              <p> Why does it make sense to put dividers on long lists of menu items that have related sub-items? </p>
               <ul class="inline-list">
-                <li class="left"><a href="question_comments.php?question='Bacon ipsum dolor sit amet nulla ham qui sint exercitation eiusmod commodo, chuck duis velit. Aute in reprehenderit, dolore aliqua non est magna in labore pig pork biltong.'&status=pending">
+                <li class="left"><a href="question_comments.php?question='Why does it make sense to put dividers on long lists of menu items that have related sub-items?'&status=pending">
                   Answer Question 
                 </a></li>
                 <li class="left"><a href="">Promote</a></li>    
@@ -101,7 +101,7 @@
        <?php if(isset($_POST["new_question"])){ ?>
         <div class="large-12 columns">
         <div class="row">
-        <div data-alert class="large-12 alert-box warning radius columns"><strong>YOU asked:</strong> [unresolved]</div>
+        <div data-alert class="large-12 alert-box warning radius columns">[unresolved] <strong>YOU asked:</strong> </div>
           <div class="large-12 columns">
             <div class="question">
               <div class="row">
@@ -129,13 +129,13 @@
     <div class="large-12 columns">
       <!-- Feed Entry -->
       <div class="row">
-      <div data-alert class="large-12 alert-box radius columns"><strong>Kaley asked:</strong> [answered by student]</div>
+      <div data-alert class="large-12 alert-box radius columns"> [answered by student] <strong>Kaley asked:</strong></div>
 
         <div class="large-2 columns small-3"><img src="student_solved.png" /></div>
         <div class="large-10 columns">
-          <p>Bacon ipsum dolor sit amet nulla ham qui sint exercitation eiusmod commodo, chuck duis velit. Aute in reprehenderit, dolore aliqua non est magna in labore pig pork biltong.</p>
+          <p>Are there any instances when recall is better than recognition?</p>
           <ul class="inline-list">
-            <li class="left"><a href="question_comments.php?question='Bacon ipsum dolor sit amet nulla ham qui sint exercitation eiusmod commodo, chuck duis velit. Aute in reprehenderit, dolore aliqua non est magna in labore pig pork biltong.'&status=student_solved">Answers (2)</a></li>
+            <li class="left"><a href="question_comments.php?question='Are there any instances when recall is better than recognition?'&status=student_solved">Answers (2)</a></li>
             <li class="left"><a href="">Promote</a></li>
           </ul>
         </div>
@@ -148,12 +148,12 @@
       <div class="large-12 columns">
       <!-- Feed Entry -->
       <div class="row">
-        <div data-alert class="large-12 alert-box radius columns"><strong>Jon asked:</strong> [answered by student]</div>
+        <div data-alert class="large-12 alert-box radius columns"> [answered by student] <strong>Jon asked:</strong></div>
         <div class="large-2 columns small-3"><img src="student_solved.png" /></div>
         <div class="large-10 columns">
-          <p>Bacon ipsum dolor sit amet nulla ham qui sint exercitation eiusmod commodo, chuck duis velit. Aute in reprehenderit, dolore aliqua non est magna in labore pig pork biltong.</p>
+          <p>Is triangulation always useful for gathering data?</p>
           <ul class="inline-list">
-            <li class="left"><a href="question_comments.php?question='Bacon ipsum dolor sit amet nulla ham qui sint exercitation eiusmod commodo, chuck duis velit. Aute in reprehenderit, dolore aliqua non est magna in labore pig pork biltong.'&status=pending">Answers (4)</a></li>
+            <li class="left"><a href="question_comments.php?question='Is triangulation always useful for gathering data?'&status=pending">Answers (4)</a></li>
             <li class="left"><a href="">Promote</a></li>
           </ul>
         </div>
@@ -163,12 +163,12 @@
       <div class="large-12 columns">
       <!-- Feed Entry -->
       <div class="row">
-          <div data-alert class="large-12 alert-box success radius columns"><strong>Marley asked:</strong> [marked resolved by professor]</div>
+          <div data-alert class="large-12 alert-box success radius columns"> [marked resolved by professor] <strong>Marley asked:</strong></div>
         <div class="large-2 columns small-3"><img src="professor_solved.png" /></div>
         <div class="large-10 columns">
-          <p>Bacon ipsum dolor sit amet nulla ham qui sint exercitation eiusmod commodo, chuck duis velit. Aute in reprehenderit, dolore aliqua non est magna in labore pig pork biltong.</p>
+          <p>Confused about what role the designer plays with respect to the user in Contextual design</p>
           <ul class="inline-list">
-            <li class="left"><a href="question_comments.php?question='Bacon ipsum dolor sit amet nulla ham qui sint exercitation eiusmod commodo, chuck duis velit. Aute in reprehenderit, dolore aliqua non est magna in labore pig pork biltong.'&status=professor_solved">Answers (2)</a></li>
+            <li class="left"><a href="question_comments.php?question='Confused about what role the designer plays with respect to the user in Contextual design'&status=professor_solved">Answers (2)</a></li>
             <li class="left"><a href="">Promote</a></li>
           </ul>
         </div>
@@ -179,13 +179,13 @@
       <div class="large-12 columns">
       <!-- Feed Entry -->
       <div class="row">
-      <div data-alert class="large-12 alert-box success radius columns"><strong>Steve asked:</strong> [marked resolved by professor]</div>
+      <div data-alert class="large-12 alert-box success radius columns"> [marked resolved by professor] <strong>Steve asked:</strong></div>
 
         <div class="large-2 columns small-3"><img src="professor_solved.png" /></div>
         <div class="large-10 columns">
-          <p>Bacon ipsum dolor sit amet nulla ham qui sint exercitation eiusmod commodo, chuck duis velit. Aute in reprehenderit, dolore aliqua non est magna in labore pig pork biltong.</p>
+          <p>Am I the only who doesn't know what WIMP is?</p>
           <ul class="inline-list">
-            <li class="left"><a href="question_comments.php?question='Bacon ipsum dolor sit amet nulla ham qui sint exercitation eiusmod commodo, chuck duis velit. Aute in reprehenderit, dolore aliqua non est magna in labore pig pork biltong.'&status=pending">Answers (3)</a></li>
+            <li class="left"><a href="question_comments.php?question='Am I the only who doesn't know what WIMP is?'&status=pending">Answers (3)</a></li>
             <li class="left"><a href="">Promote</a></li>
           </ul>
         </div>
@@ -211,16 +211,6 @@
       <div class="row">
         <div class="large-5 columns">
           <p>© Copyright Team Zaffre</p>
-        </div>
-        <div class="large-7 columns">
-          <ul class="inline-list right">
-            <li><a href="#">Section 1</a></li>
-            <li><a href="#">Section 2</a></li>
-            <li><a href="#">Section 3</a></li>
-            <li><a href="#">Section 4</a></li>
-            <li><a href="#">Section 5</a></li>
-            <li><a href="#">Section 6</a></li>
-          </ul>
         </div>
       </div>
     </div>
