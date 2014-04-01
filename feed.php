@@ -123,7 +123,7 @@
                 echo substr($row[1], 0, 15) . "...";
               }
               ?> 
-              </strong> [answered by student]</p>
+              </strong> [unresolved]</p>
             </ul>
         </div>
         <?php } else if ($row[2] == 1) { ?>
@@ -132,7 +132,15 @@
               <a id="count" href="promote.php?val= <?php echo $row[3]; ?>"><img id="tiny" src= "fi-arrow-up.svg" /> Promote (<?php echo($row[0]); ?>)</a>
             </ul>
             <ul class="left">
-              <p>[answered by student]</p>
+              <p><strong> <?php 
+              if (strlen($row[1]) < 15) {
+                echo $row[1];
+              }
+              else {
+                echo substr($row[1], 0, 15) . "...";
+              }
+              ?> 
+              </strong> [answered by student]</p>
             </ul>
         </div>
         <?php } else { ?>
@@ -141,7 +149,15 @@
               <a id="count" href="promote.php?val= <?php echo $row[3]; ?>"><img id="tiny" src= "fi-arrow-up.svg" /> Promote (<?php echo($row[0]); ?>)</a>
             </ul>
             <ul class="left">
-              <p>[marked resolved by professor]</p>
+              <p><strong> <?php 
+              if (strlen($row[1]) < 15) {
+                echo $row[1];
+              }
+              else {
+                echo substr($row[1], 0, 15) . "...";
+              }
+              ?> 
+              </strong> [marked resolved by professor]</p>
             </ul>
         </div>
         <?php } ?>
