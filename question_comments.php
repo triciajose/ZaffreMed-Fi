@@ -41,11 +41,7 @@
 						<input type="submit" value="Answer" />
 					</form>
 					<ul>
-						<?php for($i = 0; $i <=6; $i++){?>
-							<li>	
-								Comment
-							</li>
-						<?php }?>
+						
 						<?php if(isset($_POST["new_comment"])) {?>
 							<li><?php echo $_POST["new_comment"];?></li>
 						<?php } ?>

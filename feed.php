@@ -11,8 +11,8 @@
 <body>
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
   <script src="main.js"></script>
-  <script src="foundation-5.2.1/js/vendor/jquery.js"></script>
-  <script src="foundation-5.2.1/js/foundation.min.js"></script>
+      <script src="foundation-4.3.2/js/vendor/jquery.js"></script>
+    <script src="foundation-4.3.2/js/foundation.min.js"></script>
 
 
     <script>
@@ -114,7 +114,15 @@
               <a id="count" href="promote.php?val= <?php echo $row[3]; ?>" ><img id="tiny" src= "fi-arrow-up.svg" /> Promote (<?php echo($row[0]); ?>)</a>
             </ul>
             <ul class="left">
-              <p>[answered by student]</p>
+              <p><strong> <?php 
+              if (strlen($row[1]) < 15) {
+                echo $row[1];
+              }
+              else {
+                echo substr($row[1], 0, 15) . "...";
+              }
+              ?> 
+              </strong> [answered by student]</p>
             </ul>
         </div>
         <?php } else if ($row[2] == 1) { ?>
@@ -155,7 +163,7 @@
                     <?php echo $row[1];?>
                   </p>
                   <ul class="inline-list">
-                    <li class="left"><a href="<?php echo "question_comments.php?question=".$row[1]."&status=pending";?>">Answer Question</a></li>
+                    <li class="left"><a href="#" data-reveal-id="comments" data-reveal>Answer Question</a></li>
                   </ul>
                   
                 </div>
@@ -173,7 +181,16 @@
 
 </div>
     <!-- This has been source ordered to come first in the markup (and on small devices) but to be to the right of the nav on larger screens -->
-    
+
+<div id="comments" class="reveal-modal large" data-reveal>
+          <form action="#" method="post">
+          <br />    
+            <textarea placeholder="Type your response here"></textarea>
+            <input type="submit" class="button postfix" value="Answer"/>          
+            </form>
+ 
+      <a class="close-reveal-modal">&#215;</a>
+     </div>
  
  
  
