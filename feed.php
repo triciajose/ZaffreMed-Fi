@@ -39,14 +39,11 @@
       </section>
 
       <section class="middle tab-bar-section">
-        <h1 class="title"> Welcome, <?php if(isset($_POST["username"])){ echo $_POST["username"];} ?> </h1>
-      </section>
-      <section class="middle tab-bar-section center">
-      <!-- <h3>There are <?php echo rand(0,80);?> students online</h3> -->
+        <strong>Current Class:</strong> EECE 418
       </section>
 
       <section class="right">
-        <strong>Current Class:</strong> EECE 418
+        <h7>There are <?php echo rand(0,80);?> students online</h7>
       </section>
     </nav>
 <!--     </div>
@@ -66,9 +63,20 @@
       </ul>
     </aside>
     <section class="main-section">
-      <div data-alert class="alert-box info radius large-12 center">
-        <h7>There are <?php echo rand(0,80);?> students online</h7>
-      </div>
+    <br />
+
+<?php if(isset($_POST["new_question"])){
+
+  $query = $mysqli->real_escape_string($_POST["new_question"]);
+
+  $new = "INSERT INTO post (comment) VALUES ('$query') ";
+  mysqli_query($mysqli,$new); ?>
+
+    <div data-alert class="alert-box info radius"> <?php
+
+  echo "Your question has been posted <a href='#' class='close'>&times;</a>";
+ } ?>
+</div>
       <div class="large-12 columns">
       <div class="row">
         <form action="feed.php" method="post">
@@ -85,15 +93,6 @@
       </div>
         
  <!-- New question enters queue here -->
-
- <?php if(isset($_POST["new_question"])){
-
-  $query = $mysqli->real_escape_string($_POST["new_question"]);
-
-  $new = "INSERT INTO post (comment) VALUES ('$query') ";
-  mysqli_query($mysqli,$new);
- } ?>
-
 
 <?php
   $select = "SELECT * from post";
