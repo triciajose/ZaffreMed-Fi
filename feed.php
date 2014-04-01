@@ -45,7 +45,7 @@
     <!-- Left Nav Section -->
     <ul class="left">
       <li class="divider"></li>
-      <li class="active"><a href="#">EECE 418</a></li>
+      <li class="active"><a href="#">EECE 418 (<?php echo rand(0,80);?> students online)</a></li>
       <li class="divider"></li>
       <li><a href="#">EECE 527</a></li>
       <li class="divider"></li>
@@ -215,9 +215,7 @@
   <footer class="row">
     <div class="large-12 columns">
       <div class="row">
-        <div class="large-5 columns">
           <p>© Copyright Team Zaffre</p>
-        </div>
       </div>
     </div>
   </footer>
