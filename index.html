@@ -2,7 +2,7 @@
 <html>
 <head>
   <meta charset="utf-8" />
-      <title>Discuss by Zaffre</title>
+      <title>Queue&A by Zaffre</title>
       <link rel="stylesheet" type="css" href="main.css">
       <link rel="stylesheet" type="css" href="foundation-5.2.1/css/foundation.css">
       <link rel="stylesheet" type="css" href="foundation-5.2.1/css/normalize.css">
