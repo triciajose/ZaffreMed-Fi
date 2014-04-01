@@ -155,7 +155,7 @@
                     <?php echo $row[1];?>
                   </p>
                   <ul class="inline-list">
-                    <li class="left"><a href=<?php echo "question_comments.php?question=".$row[1]."&status=pending";?>>Answer Question</a></li>
+                    <li class="left"><a href="<?php echo "question_comments.php?question=".$row[1]."&status=pending";?>">Answer Question</a></li>
                   </ul>
                   
                 </div>
