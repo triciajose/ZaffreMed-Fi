@@ -18,3 +18,24 @@
 .icons img {
 	max-width: 30px;
 }
+
+p {
+	font-size: 100% !important;
+	text-align: right;
+}
+
+.alert-box {
+	max-height: 50px !important;
+}
+
+#tiny {
+	max-height: 30px !important;
+}
+
+#count {
+	color: black;
+}
+
+#count:hover {
+	color: white;
+}
