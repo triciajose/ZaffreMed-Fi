@@ -178,10 +178,27 @@
                 <div class="large-10 columns">
                   <strong> Someone asked:</strong>
                     <?php echo $row[1];?>
-                  </p>
+                    <br />
+                    <br />
+                  <?php if ($row[2] == 0) { ?>
                   <ul class="inline-list">
                     <li class="left"><a href="#" data-reveal-id="comments" data-reveal>Answer Question</a></li>
                   </ul>
+                  <?php } else if ($row[2] == 1) { ?>
+                    <strong> Someone answered:</strong>
+                    <?php echo $row[4];?>
+                    <br />
+                    <br />
+                    <ul class="inline-list">
+                    <li class="left"><a href="#" data-reveal-id="comments" data-reveal>Answer Question</a></li>
+                  </ul>
+                  <?php } else { ?>
+                    <strong> Someone answered:</strong>
+                    <?php echo $row[4];?>
+                    <br />
+                  <?php } ?>
+                  </p>
+                  
                   
                 </div>
               </div>
