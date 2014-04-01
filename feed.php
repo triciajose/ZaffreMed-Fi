@@ -12,7 +12,7 @@
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
   <script src="main.js"></script>
       <script src="foundation-4.3.2/js/vendor/jquery.js"></script>
-    <script src="foundation-4.3.2/js/foundation.min.js"></script>
+      <script src="foundation-4.3.2/js/foundation.min.js"></script>
 
 
     <script>
@@ -22,7 +22,7 @@
     <!-- Main Feed -->
     <!-- Navigation -->
 
-    <?php
+<?php
   $host = "localhost";
   $user = "root";
   $pass = "password";
@@ -30,39 +30,41 @@
 
   $mysqli = new mysqli($host, $user, $pass, $directory);
     ?>
-    <div class="off-canvas-wrap">
-  <div class="inner-wrap">
-<!--     <div class="sticky">
- -->    <nav class="tab-bar">
-      <section class="left-small">
-        <a class="left-off-canvas-toggle menu-icon" ><span></span></a>
-      </section>
 
-      <section class="middle tab-bar-section">
-        <strong>Current Class:</strong> EECE 418
-      </section>
+    <nav class="top-bar">
+  <ul class="title-area">
+    <!-- Title Area -->
+    <li class="name">
+      <h1><a href="#">prioriQ</a></h1>
+    </li>
+    <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
+    <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+  </ul>
 
-      <section class="right">
-        <h7>There are <?php echo rand(0,80);?> students online</h7>
-      </section>
-    </nav>
-<!--     </div>
- -->
-    <aside class="left-off-canvas-menu">
-      <ul class="off-canvas-list">
-        <li><label>My Classes</label></li>
-        <li><a href="#">EECE 418</a></li>
-        <li><a href="#">NAPS 425</a></li>
-        <li><a href="#">NOMS 300</a></li>
-        <li><label>Settings</label></li>
-        <li><a href="#">Add a class</a></li>
-        <li><a href="#">Edit profile</a></li>
-        <li><a href="#">Logout</a></li>
+  <section class="top-bar-section">
+    <!-- Left Nav Section -->
+    <ul class="left">
+      <li class="divider"></li>
+      <li class="active"><a href="#">EECE 418</a></li>
+      <li class="divider"></li>
+      <li><a href="#">EECE 527</a></li>
+      <li class="divider"></li>
+      <li><a href="#">Add a class +</a></li>
+      <li class="divider"></li>
+    </ul>
+
+    <!-- Right Nav Section -->
+    <ul class="right">
+      <li class="divider hide-for-small"></li>
+      <li><a href="index.html">Logout</a>
+
+      </li>
+        
+    </ul>
+  </section>
+</nav>
 
 
-      </ul>
-    </aside>
-    <section class="main-section">
     <br />
 
 <?php if(isset($_POST["new_question"])){
@@ -174,7 +176,6 @@
         </div>
         <hr/></div>
   <?php }?>
-    </section>
 
   <a class="exit-off-canvas"></a>
 
